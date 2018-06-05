@@ -34,7 +34,7 @@ client.on('message', message => {
     	message.reply('pong');
     }
     
-    if (message.content === '$spam') { 
+    if (message.content === '^spam') { 
         if (spamid.indexOf(message.channel.id) < 0) {
             spamid.push(message.channel.id);
         }
@@ -62,7 +62,7 @@ client.on('message', message => {
         }
     }
     
-    if (message.content === '$stop') {
+    if (message.content === '^stop') {
         var index = spamid.indexOf(message.channel.id);
         if (index > -1) {
           spamid.splice(index, 1);
@@ -91,11 +91,11 @@ client.on('message', message => {
         }
     }
     
-    if (message.content === '$spamchannels') { 
+    if (message.content === '^spamchannels') { 
         message.channel.send('spam channels: ' + spamid.join(' '));
     }
 
-    if (message.content === '$info') {
+    if (message.content === '^info') {
         var index = infoid.indexOf(message.channel.id);
         if (index > -1) {
             infoid.splice(index, 1);
@@ -106,11 +106,11 @@ client.on('message', message => {
         }
     }
 
-    if (message.content === '$infochannels') { 
+    if (message.content === '^infochannels') { 
         message.channel.send('spawns info channels: ' + infoid.join(' '));
     }
 
-    if (message.content === '$alive') {
+    if (message.content === '^alive') {
         var index = aliveid.indexOf(message.channel.id);
         if (index > -1) {
             aliveid.splice(index, 1);
@@ -121,7 +121,7 @@ client.on('message', message => {
         }
     }
 
-    if (message.content === '$alivechannels') { 
+    if (message.content === '^alivechannels') { 
         message.channel.send('keep alive channels: ' + aliveid.join(' '));
     }
 
