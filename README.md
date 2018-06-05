@@ -1,1 +1,2 @@
-# dirtyspammy
+# spammy
+Little spammer bot
