@@ -18,7 +18,7 @@ var acurr = 0;
         if (curr >= spamid.lenght) {
             curr = 0;
         }
-        client.channels.get(spamid[curr]).send('spamming here');
+        client.channels.get(spamid[curr]).send('suxy suxy suxy');
         curr = curr + 1;
     }
 };*/
@@ -51,11 +51,11 @@ client.on('message', message => {
                         acurr = 0;
                         count = 0;   
                     }
-                    client.channels.get(aliveid[acurr]).send('p!ping');
+                    client.channels.get(aliveid[acurr]).send('.ping');
                     acurr++;
                 }
                 else {
-                    client.channels.get(spamid[curr]).send('spamming here');
+                    client.channels.get(spamid[curr]).send('suxy suxy suxy');
                     curr++;
                 }
             }, 2000);
@@ -80,7 +80,7 @@ client.on('message', message => {
                         acurr = 0;
                         count = 0;   
                     }
-                    client.channels.get(aliveid[acurr]).send('p!ping');
+                    client.channels.get(aliveid[acurr]).send('p!.ping');
                     acurr++;
                 }
                 else {
